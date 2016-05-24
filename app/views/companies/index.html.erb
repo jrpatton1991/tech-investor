@@ -1,7 +1,16 @@
 <% @companies.each do |company| %>
 
   <ul>
-    <li><%= link_to company.name, company_path(company) %></li>
-  </ul>
+    <li>
+      <%= link_to company.name, company_path(company) %>
 
+      <% if company.user_ids.include?(current_user.id) %>
+        <%= link_to 'Divest', '#' %>
+      <% else %>
+        <%= link_to 'Invest', '#' %>
+      <% end %>
+
+
+    </li>
+  </ul>
 <% end %>
