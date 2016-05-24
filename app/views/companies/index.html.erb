@@ -1,8 +1,7 @@
 <% @companies.each do |company| %>
 
   <ul>
-    <li><%= company.name %></li>
+    <li><%= link_to company.name, company_path(company) %></li>
   </ul>
-  <% end %>
 
-<p>Find me in app/views/companies/index.html.erb</p>
+<% end %>
