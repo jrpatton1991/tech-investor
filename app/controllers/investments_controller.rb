@@ -7,11 +7,8 @@ class InvestmentsController < ApplicationController
   end
 
   def destroy
-    # if condition
-    #
-    # else
-    #
-    # end
+    @investment = current_user.investments.find(params[:id])
+    @investment.destroy
+    redirect_to root_path
   end
-
 end
