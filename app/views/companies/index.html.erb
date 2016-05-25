@@ -3,13 +3,14 @@
   <ul>
     <li>
       <%= link_to company.name, company_path(company) %>
-
-      <% if company.user_ids.include?(current_user.id) %>
-        <%= link_to 'Divest', '#' %>
-      <% else %>
-        <%= link_to 'Invest', '#' %>
+      <% if current_user %>
+        <% investment = current_user.investments.find_by(company_id: company.id) %>
+        <% if investment %>
+          <%= link_to 'Divest', investment_path(investment), method: :delete %>
+        <% else %>
+          <%= link_to 'Invest', investments_path(company_id: company.id), method: :post %>
+        <% end %>
       <% end %>
-
 
     </li>
   </ul>
