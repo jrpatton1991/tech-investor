@@ -1,0 +1,28 @@
+div#login-form {
+    border: solid darkgray 2px;
+    background-color: lightgray;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+
+  .field {
+    margin-bottom: 20px;
+
+    input{
+      width: 100%;
+      height: 30px;
+      font-size: 15px;
+    }
+
+    label {
+      font-style: italic;
+      color: #333333;
+    }
+  }
+
+  input[type="submit"] {
+    width: 301px;
+    font-size: 30px;
+    margin: 0 auto;
+  }
+}
