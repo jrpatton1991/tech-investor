@@ -1,8 +1,11 @@
-div#login-form {
-    border: solid darkgray 2px;
-    background-color: lightgray;
-    padding: 20px;
-    width: 300px;
+body{
+  background-color: #002E60;
+}
+div#signup-form {
+    border: solid #AF473C 10px;
+    background-color: #FAFAFA;
+    padding: 100px;
+    width: 400px;
     margin: 0 auto;
 
   .field {
@@ -25,4 +28,15 @@ div#login-form {
     font-size: 30px;
     margin: 0 auto;
   }
+}
+
+
+div#login-form{
+  background-color: #FAFAFA;
+  border: solid #AF473C 10px;
+  background-color: #FAFAFA;
+  padding: 100px;
+  width: 400px;
+  margin: 0 auto;
+
 }
