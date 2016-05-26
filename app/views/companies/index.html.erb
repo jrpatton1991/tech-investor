@@ -6,14 +6,14 @@
 
   <div class="row">
   <% @companies.each do |company| %>
-    <div class="col-lg-2">
+    <div class="col-lg-2 company-name">
         <%= link_to company.name, company_path(company) %>
         <% if current_user %>
           <% investment = current_user.investments.find_by(company_id: company.id) %>
           <% if investment %>
-            <%= link_to 'Divest', investment_path(investment), method: :delete %>
+            <%= link_to 'Divest', investment_path(investment), method: :delete, :class => "btn btn-primary" %>
           <% else %>
-            <%= link_to 'Invest', investments_path(company_id: company.id), method: :post %>
+            <%= link_to 'Invest', investments_path(company_id: company.id), method: :post, :class => "btn btn-primary" %>
           <% end %>
         <% end %>
     </div>
@@ -23,14 +23,14 @@
 <% else %>
   <div class="row">
   <% @companies.first(6).each do |company| %>
-    <div class="col-lg-2">
+    <div class="col-lg-2 company-name">
         <%= link_to company.name, company_path(company) %>
         <% if current_user %>
           <% investment = current_user.investments.find_by(company_id: company.id) %>
           <% if investment %>
-            <%= link_to 'Divest', investment_path(investment), method: :delete %>
+            <%= link_to 'Divest', investment_path(investment), method: :delete, :class => "btn" %>
           <% else %>
-            <%= link_to 'Invest', investments_path(company_id: company.id), method: :post %>
+            <%= link_to 'Invest', investments_path(company_id: company.id), method: :post, :class => "btn" %>
           <% end %>
         <% end %>
     </div>
