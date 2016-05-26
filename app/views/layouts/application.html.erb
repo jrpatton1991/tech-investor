@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel = "stylesheet">
+
   <title>TechInvestor</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-
-  <% if current_user %>
-    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign-up', new_user_registration_path %>
-    or
-    <%= link_to 'Login', new_user_session_path %>
-  <% end %>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="">Home</a></li>
+      <% if !current_user %>
+        <li role="presentation"><%= link_to 'Sign-up', new_user_registration_path %></li>
+        <li role="presentation"><%= link_to 'Login', new_user_session_path %></li>
+      <% else %>
+        <li role="presentation"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+      <% end %>
+  </ul>
 
 <%= yield %>
 
