@@ -24,4 +24,12 @@ a {
   a{
     display: block;
   }
+  a:hover{
+    color: #AF473C;
+  }
+   a.btn:hover{
+    background-color: #AF473C;
+    border: none;
+    color: white;
+   }
 }
