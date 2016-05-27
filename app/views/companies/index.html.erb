@@ -1,7 +1,10 @@
-<% @companies.each do |company| %>
+<div class="bg-header">
 
-  <ul>
-    <li>
+</div>
+
+<div class="row">
+<% @companies.each do |company| %>
+  <div class="col-lg-2">
       <%= link_to company.name, company_path(company) %>
       <% if current_user %>
         <% investment = current_user.investments.find_by(company_id: company.id) %>
@@ -11,7 +14,6 @@
           <%= link_to 'Invest', investments_path(company_id: company.id), method: :post %>
         <% end %>
       <% end %>
-
-    </li>
-  </ul>
+  </div>
 <% end %>
+</div>

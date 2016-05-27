@@ -1,0 +1,26 @@
+.bg-header {
+
+  background-image: image-url("financial-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+
+}
+
+.col-lg-2 {
+  padding-top: 10px;
+  text-align:  center;
+}
+
+
+
+a{
+  text-decoration: none;
+}
+
+.col-lg-2 a:hover{
+  text-decoration: none;
+  border: 2px solid #FAFAFA;
+  padding: 5px;
+  color: #FAFAFA;
+}
