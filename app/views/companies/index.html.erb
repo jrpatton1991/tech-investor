@@ -1,5 +1,11 @@
 <div class="bg-header">
+  <div>
+    <h1 id="tech-investor">TechInvestor</h1>
+  </div>
+</div>
 
+<div class="about">
+  <p><h1>ABOUT TECHINVESTOR</h1></p>
 </div>
 
 <% if current_user %>
@@ -7,6 +13,7 @@
   <div class="row">
   <% @companies.each do |company| %>
     <div class="col-lg-2 company-name">
+      <h4>
         <%= link_to company.name, company_path(company) %>
         <% if current_user %>
           <% investment = current_user.investments.find_by(company_id: company.id) %>
@@ -16,6 +23,7 @@
             <%= link_to 'Invest', investments_path(company_id: company.id), method: :post, :class => "btn btn-primary" %>
           <% end %>
         <% end %>
+       </h4>
     </div>
   <% end %>
   </div>
