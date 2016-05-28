@@ -2,11 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// $blue-color: #002E6D ;
+
+
+// body {
+//  background-color: $blue-color;
+// }
+
+// ul{
+//  list-style: none;
+// }
+
+// a {
+//  color: white;
+//  text-decoration: none;
+// }
+
+// .company-name{
+//  font-size: 16px;
+//  margin-bottom: 15px;
+//  a{
+//    display: block;
+//    border: 2px solid #AF473C ;
+//    background-color: white;
+//    color: #AF473C ;
+//  }
+// }
+
+
+
+
+
+
+
+
 $blue-color: #002E6D;
 
+$main-font: "Lato";
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
 body {
   background-color: $blue-color;
+  font-family: $main-font;
 }
 
 ul{
@@ -17,6 +55,19 @@ a {
   color: white;
   text-decoration: none;
 }
+
+#tech-investor {
+    color: #AFAFAF;
+    text-align: center;
+    display: inline-block;
+    margin-left: 425px;
+    background-color: black;
+    margin-top: 80px;
+    padding: 30px;
+    filter: alpha(opacity=50);
+    opacity: 0.8;
+    border-radius: 25px;
+  }
 
 .company-name{
   font-size: 16px;
@@ -32,4 +83,14 @@ a {
     border: none;
     color: white;
    }
+}
+
+.about{
+  color: #FAFAFA;
+  text-align: center;
+  border: 3px solid white;
+  padding-bottom: 40px;
+  h1{
+    padding-top: 30px;
+  }
 }
