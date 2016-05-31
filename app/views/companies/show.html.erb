@@ -6,7 +6,7 @@
 
 <div class="image_id">
 <div class="row">
-  <div class="col-md-12"><h1><%= @company.name %></h1>
+  <div class="col-md-12"><h1><%= link_to @company.name, @company.url %></h1>
 
 </div>
 
@@ -14,7 +14,7 @@
 </div>
 
 
-<p>
+<p id="bio">
   <%= @company.bio %>
 
 </p>
@@ -22,7 +22,6 @@
 
 </div>
 
-  <h1><%= link_to "Company Website", @company.url %></h1>
 
 <%= link_to "back", :companies %>
 </div>
