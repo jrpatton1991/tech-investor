@@ -2,13 +2,14 @@
   width: 200px;
   height:200px;
   margin:0 auto;
+  border: solid #AF473C 1px;
 }
 
-p {
+#bio {
   color: white;
-  font-size: 150%
- }
-
+  border: ridge #AF473C 5px;
+  font-size: 150%;
+}
 h1 {
   text-align: center;
   color: white;
